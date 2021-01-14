@@ -1,0 +1,29 @@
+@import "variables";
+
+/*---Media Query---*/
+
+    @mixin create-mq($breakpoint) {
+        @if($breakpoint == 0) {
+            @content;
+        } @else {
+                @media (min-width: $breakpoint * 1) {
+                @content;
+            }
+        }
+    }
+
+/*---Layout---*/
+
+    @mixin create-cols($modifier, $grid-colunns, $breakpoint) {
+        @include create-mq($breakpoint) {
+            @for $i from 1 through $grid-colunns {
+                .cu-col#{$modifier}-#{$i} {
+                    flex-basis: $i / $grid-columns * 100%;;
+                }
+            }
+        }
+    }
+
+    @each $modifier , $breakpoint in $grid-breakpoints {
+        @include create-cols($modifier, $grid-columns, $breakpoint);
+    }

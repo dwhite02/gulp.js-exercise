@@ -1,0 +1,22 @@
+/*  -----------------
+    VARIABLES
+---------------------  */
+
+    $grid-columns: 12;
+
+    $grid-breakpoints: (
+        '': 0,
+        '-xs': 375px,
+        '-sm': 576px,
+        '-md': 768px,
+        '-lg': 992px,
+        '-xl': 1200px,
+        '-xxl': 1400px
+    );
+
+    $cu-grey: #4b5d68;
+    $cu-darkBlue: #212353;
+    $cu-purple: #9C69E2;
+    $cu-pink: #F063B8;
+    $cu-green: #68C9BA;
+    $cu-blue: #2D9CDB;
